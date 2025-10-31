@@ -1,21 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-	src: "./fonts/GeistVF.woff",
-	variable: "--font-geist-sans",
-	weight: "100 900",
-});
-const geistMono = localFont({
-	src: "./fonts/GeistMonoVF.woff",
-	variable: "--font-geist-mono",
-	weight: "100 900",
-});
-
 export const metadata: Metadata = {
-	title: "Nomi Money",
-	description: "Nomi Money",
+	title: "Nomi Money MVP",
+    description: "Privacy invoices with Self + Nightfall"
 };
 
 export default function RootLayout({
@@ -24,12 +12,23 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-			>
-				{children}
-			</body>
-		</html>
+		<html lang="en" className="h-full">
+      <body className="min-h-screen bg-nomi.bg text-slate-100">
+        <div className="max-w-5xl mx-auto py-8">
+          <header className="flex items-center justify-between mb-8">
+            <h1 className="text-2xl font-semibold tracking-tight">
+              Nomi Money
+            </h1>
+            <nav className="flex gap-4 text-sm">
+              <a href="/" className="hover:text-nomi.accent">Overview</a>
+              <a href="/invoice" className="hover:text-nomi.accent">Create Invoice</a>
+              <a href="/pay" className="hover:text-nomi.accent">Pay</a>
+              <a href="/receipts" className="hover:text-nomi.accent">Receipts</a>
+            </nav>
+          </header>
+          {children}
+        </div>
+      </body>
+    </html>
 	);
 }

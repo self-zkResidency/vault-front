@@ -13,21 +13,14 @@ export default function HomePage() {
 				<Image
 					src={skeleton} // Place your GIF in the public folder
 					alt="Loading animation"
-					width={200}
-					height={200}
+					width={300}
+					height={300}
 					priority
 				/>
-				<p className="text-gray-500 text-sm">You are now verified to access this application.</p>
-				<div className="flex flex-col items-center gap-2 mt-2">
-					<h3 className="text-gray-800 text-lg font-bold">Here you are going to be able to:</h3>
-					<ul className="list-disc list-inside text-gray-600 text-sm">
-						<li>Make a deposit</li>
-						<li>Withdraw money</li>
-						<li>Transfer money</li>
-						<li>View your transaction history</li>
-						<li>View your account balance</li>
-					</ul>
-				</div>
+			</div>
+			<div className="text-center">
+				<h3>Now you can deposit your money!</h3>
+				<p>Soonish... but not yet!</p>
 			</div>
 		</div>
 	);

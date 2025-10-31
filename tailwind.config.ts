@@ -8,10 +8,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-    },
+        nomi: {
+          bg: "#020817",
+          surface: "#0f172a",
+          accent: "#38bdf8",
+          warn: "#f97316"
+        }
+      }
+    }
   },
   plugins: [],
 };
